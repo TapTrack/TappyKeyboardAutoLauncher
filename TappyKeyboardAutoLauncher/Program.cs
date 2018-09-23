@@ -26,14 +26,14 @@ namespace TappyKeyboardAutoLauncher
             int scanStaggerMs = 2000;
 
             var p = new OptionSet() {
-    { "rt|RecordType=", "A type of NDEF record to enter as text. If unspecified only text records are included.",
+    { "rt|RecordType=", "A type of NDEF record to enter as keystrokes. If unspecified only text records are included. Options are 'T' for text, 'U' for URI/URL, 'M' for MIME, 'E' for external",
        v => recordTypeArgs.Add (v) },
     { "cc|ControlChar=",
        "A control character to enter after each record contained in the NDEF message.  Valid options are 'return' and 'tab'",
        v => controlCharArgs.Add(v) },
     { "FormMode", "Flag to indicate form mode, which insters the TAB character after each record except the final one where RETURN is inserted. If absent form mode is disabled.",
        v => { if (v != null) formModeActive = true; }  },
-    {"sd|ScanDelay=", "Delay in milliseconds to wait after each tag is scanned before initiating another scan.  This must be an integer",
+    {"sd|ScanDelay=", "Delay in milliseconds to wait after each tag is scanned before initiating another scan.  This must be an integer.  The default value is 2000ms.",
        (int v) => scanStaggerMs = v},
     { "h|help",  "Show this message and exit",
           v => showHelp = true},
