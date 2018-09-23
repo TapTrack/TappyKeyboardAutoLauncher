@@ -1,12 +1,12 @@
 # Tappy Automatic NFC Keyboard Wedge Utility
 
-This is a command line utility designed to allow users to easily use a Tappy reader as an NFC keyboard entry device while also providing a simple way to have Windows automatically configure itself for NFC keyboard entry upon bootup. By providing a configurable utility using a command line utility (CLI), TapTrack as allowed a simple batch file to be written and invoked upon bootup by placing the file in the Windows "Startup" folder.  If the TappyUSB is connected to the PC at bootup it will automatically initiate scanning for NFC tags and entering the data as keystrokes without any user intervention needed. 
+This is a command line utility designed to allow users to easily use a Tappy reader as an NFC keyboard entry device while also providing a simple way to have Windows automatically configure itself for NFC keyboard entry upon bootup. By providing a configurable utility using a command line utility (CLI), TapTrack has allowed a simple batch file to be written and invoked upon bootup by placing the file in the Windows "Startup" folder.  If the TappyUSB is connected to the PC at bootup it will automatically connect to it and initiate scanning for NFC tags while entering the data as keystrokes without any user intervention needed. 
 
 ## Supported Readers
 
-As of v1.0 only the TappyUSB reader is supported.  If you're looking for a BLE NFC reader solution on Windows for keyboard entry, have a look at the [TappyBLEKeyboardWedge](https://github.com/TapTrack/TappyBLEKeyboardWedge) utility.
+As of v1.0 only the TappyUSB reader is supported.  If you're looking for a BLE NFC reader solution for Windows keyboard entry, have a look at the [TappyBLEKeyboardWedge](https://github.com/TapTrack/TappyBLEKeyboardWedge) utility.
 
-In its original release this utility will automatically detect what COM port the TappyUSB is connected to.  It will select the first TappyUSB it finds for use.  This may be undesirable if one wants multiple TappyUSB readers connected to the PC and wishes to specify the port for this utility.  A future release will include this as a configuration option. 
+In its original release this utility will automatically detect what COM port the TappyUSB is connected to and select the first TappyUSB discovered.  This may be undesirable if one wants multiple TappyUSB readers connected to the PC and wishes to specify the port in this utility.  A future release will include this as a configuration option. 
 
 ## Command Line Usage
 
