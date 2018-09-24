@@ -31,7 +31,7 @@ In its original release this utility will automatically detect what COM port the
 
 ## Example
 
-If invoked without any command line arguments or options, the utility include text records as keystrokes with an {ENTER} keystroke after each record:
+If invoked without any command line arguments or options, the utility includes text records as keystrokes with an {ENTER} keystroke after each record:
 
 `TappyKeyboardAutoLauncher`
 
