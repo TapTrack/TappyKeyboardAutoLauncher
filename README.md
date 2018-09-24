@@ -31,16 +31,20 @@ In its original release this utility will automatically detect what COM port the
 
 ## Example
 
+If invoked without any command line arguments or options, the utility include text records as keystrokes with an {ENTER} keystroke after each record:
+
+`TappyKeyboardAutoLauncher`
+
 To have NDEF text records inputted as keystrokes followed by the ENTER key:
 
-`TappyKeyboardAutoLauncher -RecordType T -ControlChar return`
+`TappyKeyboardAutoLauncher -RecordType=T -ControlChar=return`
 
 To have both NDEF text an URI/URL records inputted as keystrokes followed by the ENTER key:
 
-`TappyKeyboardAutoLauncher -RecordType T -RecordType U -ControlChar return`
+`TappyKeyboardAutoLauncher -RecordType=T -RecordType=U -ControlChar=return`
 
 To have NDEF MIME records inputted as keystrokes with a delay of half a second between scans:
 
-`TappyKeyboardAutoLauncher -RecordType M -ScanDelay 500`
+`TappyKeyboardAutoLauncher -RecordType=M -ScanDelay=500`
 
 
