@@ -7,7 +7,6 @@ using System.Threading;
 using TapTrack.Tcmp.Communication;
 using TapTrack.Tcmp.CommandFamilies.BasicNfc;
 using TapTrack.Tcmp.Communication.Exceptions;
-//using NdefLibrary.Ndef;
 using NDesk.Options;
 
 namespace TappyKeyboardAutoLauncher
@@ -38,17 +37,6 @@ namespace TappyKeyboardAutoLauncher
     { "h|help",  "Show this message and exit",
           v => showHelp = true},
             };
-
-            //void DisplayUsage()
-            //{
-            //    Console.WriteLine("Usage: TappyKeyboardAutoLauncher [OPTIONS]");
-            //    Console.WriteLine("A simple command line utility designed to automatically detect a Tappy reader and engadge keyboard entry mode");
-            //    Console.WriteLine("Hint: Put this command intoa a simple batch (.bat) file and place the file in the Startup folder to have Windows automatically start accepting NFC tag data as keyboard entry upon bootup");
-            //    Console.WriteLine();
-            //    Console.WriteLine("Options:");
-            // //   p.WriteOptionDescriptions(Console.Out);
-            //    return;
-            //}
 
             void AddRecordTypeToPrint(String recordTypeStr)
             {
@@ -100,6 +88,8 @@ namespace TappyKeyboardAutoLauncher
                     {
                         Console.WriteLine("Usage: TappyKeyboardAutoLauncher [OPTIONS]");
                         Console.WriteLine("A simple command line utility designed to automatically detect a Tappy reader and engadge keyboard entry mode");
+                        Console.WriteLine();
+                        Console.WriteLine("***If no options are provided*** this utility will accept text records as keystrokes with the {ENTER} key at the end of each record");
                         Console.WriteLine();
                         Console.WriteLine("**Hint:***");
                         Console.WriteLine("Put this command into a a simple batch (.bat) file and place the file in the Startup folder to have Windows automatically start accepting NFC tag data as keyboard entry upon bootup");

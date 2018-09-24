@@ -87,7 +87,7 @@ namespace TappyKeyboardAutoLauncher
                 tappy.SendCommand(repeatRead, InvokeKeyboardFeature);
                 return;
             }
-            else
+            else if (frame.CompareCommandFamilies(new byte[]{0x00,0x01}) && frame.ResponseCode == 0x02)
             {
                 try
                 {
@@ -165,7 +165,11 @@ namespace TappyKeyboardAutoLauncher
                 {
                     Console.WriteLine("Error Parsing NDEF Response From Tappy");
                 }
-               
+
+            }
+            else
+            {
+                Console.WriteLine("Invalid TCMP Response From Tappy (i.e not the command family and response code expected)");
             }
         }
 
